@@ -1,0 +1,138 @@
+body{
+    font-family: "Pixelify sans", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    background-image: url(assets/r-p-s_bg3.png);
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #5A3A2E;
+}
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+h1{
+    color: #B85C8A;
+    text-shadow: 3px 3px #FFE3EE;
+}
+
+/* ================GAME SCREEN================== */
+#gameScreen{
+    position:relative;
+}
+
+#gameScreen{
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+}
+
+#gameScreen.visible{
+    display: flex;
+    opacity: 1;
+}
+
+#gameScreen h1,
+#gameScreen .choices,
+#gameScreen #playerDisplay,
+#gameScreen #computerDisplay,
+#gameScreen #resultDisplay,
+#gameScreen .scoreDisplay{
+    position:relative;
+    z-index:1;
+}
+.glass{
+    position:absolute;
+    inset:0;
+    background:rgba(240, 155, 206, 0.119);
+    backdrop-filter:blur(3px);
+    opacity:1;
+}
+
+.choices{
+    margin-bottom:30px;
+   
+}
+
+#playerDisplay,
+#computerDisplay{
+    font-size: 1.3rem;
+    
+}
+#resultDisplay{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.scoreDisplay{
+    font-size: 2rem ;
+}
+/*==============================PAW BTNS==================================*/
+
+.choiceBtn{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+.choiceBtn img{
+    width: 90px;   
+    image-rendering: pixelated;
+    transition: transform .2s;
+}
+
+
+/*=============START SCREEN============*/
+#startScreen{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#startBtn{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 24px;
+    padding: 12px 30px;
+    background-color: #f5b6c8;
+    color: #5a3a2e;
+    border: 4px solid #5a3a2e;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #5a3a2e;
+    transition: 0.2s;
+}
+
+#startBtn:hover{
+    transform: translateY(-5px);
+}
+
+#startBtn:active{
+    transform: translateY(5px);
+    box-shadow: 2px 2px 0px #5a3a2e;
+}
+
+
+/* CAT */
+#sleepingCat{
+    cursor:pointer;
+    width: 100px;
+    image-rendering: pixelated;
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+}
+
+#startScreen,
+#gameScreen{
+    transition: opacity 0.8s ease, filter 0.8s ease;
+}
+
